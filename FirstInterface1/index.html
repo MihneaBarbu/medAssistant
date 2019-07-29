@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+  <meta http-equiv="X-UA-Compatible" content="IE=11"/>
+    <meta charset="utf-8">
+    <title>Med Assistant</title>
+    <meta name="generator" content="Codeply">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/animate.min.css" />
+    <link rel="stylesheet" href="./css/ionicons.min.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+      
+    </nav>
+    <header id="first">
+        <div class="header-content">
+            <div class="inner">
+                <h1 class="cursive">Bun venit!</h1>
+                <h4>Alege tipul serviciului dorit :</h4>
+                <hr>
+                
+				<a id="introducere" href="#one" class="btn btn-primary btn-xl page-scroll">Introducere date</a>
+				<a id="notificari" href="#one" class="btn btn-primary btn-xl page-scroll">Trimitere notificari</a>
+				<a id="statistica" href="#one" class="btn btn-primary btn-xl page-scroll">Rezultate tratament</a>
+				
+				</hr>
+				
+            </div>
+        </div>
+       
+    </header>
+  
+    
+   
+   
+    
+ 
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/jquery.easing.min.js"></script>
+    <script src="./js/wow.js"></script>
+    
+	<script>
+	document.getElementById("introducere").onclick=function(){
+        		var output="IntroducereDate";
+        		window.external.setResult(output);
+        	};
+    document.getElementById("notificari").onclick=function(){
+        		var output="TrimitereNotificari";
+        		window.external.setResult(output);
+        	};	
+ document.getElementById("statistica").onclick=function(){
+        		var output="Statistica";
+        		window.external.setResult(output);
+        	};	
+ 		
+	
+	
+	
+	
+	</script>
+  </body>
+</html>

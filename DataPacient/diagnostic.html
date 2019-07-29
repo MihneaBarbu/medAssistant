@@ -1,0 +1,508 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=11" />
+<title>Date Pacient</title>
+
+<style>
+
+body{
+	margin:0;
+	color:#6a6f8c;
+	background-image:url(assets/images/1.jpg) ;
+	font:600 16px/18px 'Open Sans',sans-serif;
+
+}
+
+img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+}
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+.login-wrap{
+	width:100%;
+	margin:0px;
+	max-width:525px;
+	min-height:1160px;
+	position:relative;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+
+
+.login-html{
+	width:100%;
+	height:100%;
+	position:absolute;
+	padding:90px 70px 50px 70px;
+	background:rgba(40,57,101,.9);
+}
+.login-html .sign-in-htm,
+.login-html .sign-up-htm{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+	transition:all .4s linear;
+}
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check{
+	display:none;
+}
+
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check1{
+	display:none;
+}
+
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button {
+	text-transform:uppercase;
+}
+
+.login-html .tab{
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+}
+
+.login-html .sign-in:checked + .tab,
+.login-html .sign-up:checked + .tab{
+	color:#fff;
+	border-color:#1161ee;
+}
+
+.login-form{
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+}
+
+.login-form .group{
+	margin-bottom:13px;
+}
+
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button{
+	width:100%;
+	color:#fff;
+	display:block;
+}
+
+.login-form .group .input,
+.login-form .group .button{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255,255,255,.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+.login-form .group1 .label,
+.login-form .group1 .input1,
+.login-form .group1 .button{
+	width:68%;
+	color:#fff;
+	//display:block;
+}
+
+.login-form .group1 .input1,
+.login-form .group1 .button{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255,255,255,.1);
+}
+
+
+.login-form .group .label,
+.login-form .group .input1,
+.login-form .group .button{
+	width:100%;
+	color:#fff;
+	display:block;
+}
+.login-form .group .input1,
+.login-form .group .button{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255,255,255,.1);
+}
+
+
+
+.login-form .group1 .label,
+.login-form .group1 .input,
+.login-form .group1 .button{
+	width:100%;
+	color:#fff;
+	display:block;
+}
+
+.login-form .group1 .input,
+.login-form .group1 .button{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255,255,255,.1);
+}
+
+
+.login-form .group .label{
+	color:#aaa;
+	font-size:12px;
+}
+
+.login-form .group1 .label{
+	color:#aaa;
+	font-size:12px;
+}
+
+.login-form .group .button{
+	background:#1161ee;
+font-weight: bold;
+}
+
+.login-form .group label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	background:rgba(255,255,255,.1);
+}
+
+
+.login-form .group label .icon:before,
+.login-form .group label .icon:after{
+	content:'';
+	width:10px;
+	height:2px;
+	background:#fff;
+	position:absolute;
+	transition:all .2s ease-in-out 0s;
+}
+.login-form .group label .icon:before{
+	left:3px;
+	width:5px;
+	bottom:6px;
+	transform:scale(0) rotate(0);
+}
+
+.login-form .group label .icon:after{
+	top:6px;
+	right:0;
+	transform:scale(0) rotate(0);
+}
+.login-form .group .check:checked + label{
+	color:#fff;
+}
+.login-form .group .check:checked + label .icon{
+	background:#1161ee;
+}
+.login-form .group .check:checked + label .icon:before{
+	transform:scale(1) rotate(45deg);
+}
+.login-form .group .check:checked + label .icon:after{
+	transform:scale(1) rotate(-45deg);
+}
+
+
+
+.login-form .group .check1:checked + label{
+	color:#fff;
+}
+.login-form .group .check1:checked + label .icon{
+	background:#1161ee;
+}
+.login-form .group .check1:checked + label .icon:before{
+	transform:scale(1) rotate(45deg);
+}
+.login-form .group .check1:checked + label .icon:after{
+	transform:scale(1) rotate(-45deg);
+}
+
+
+
+
+.login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
+	transform:rotate(0);
+}
+.login-html .sign-up:checked + .tab + .login-form .sign-up-htm{
+	transform:rotate(0);
+}
+
+.hr{
+	height:2px;
+	margin:60px 0 50px 0;
+	background:rgba(255,255,255,.2);
+}
+.foot-lnk{
+	text-align:center;
+}
+
+
+
+.addSkillBtn {
+	border:none;
+	width: 30%;
+	padding:15px 20px;
+	border-radius:25px;
+	display: inline-block;
+  	vertical-align: middle;
+	background:#1161ee;
+	font-size: 15px;
+	text-align: center;
+	color: #fff;
+	
+}
+
+.addSkillBtn:hover {
+  background-color: #0b0ebc;
+  
+}
+
+.close {
+  position: center;
+  right: 20px;
+  top: 0;
+  padding: 3px 3px 3px 3px;
+}
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+ul li {
+  width: auto;
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 10px;
+  list-style-type:none;
+  background-color: transparent;
+  font-size: 15px;
+  color: #ffffff;
+
+  transition: 0.2s;
+  display:inline-block;
+   
+  
+  /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; 
+}
+
+ul li:nth-child(odd) {
+  background-color: transparent;
+}
+ul li:hover {
+  background: #1161ee;
+}
+
+</style>
+</head>
+
+<body>
+<div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Date pacient</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"></label>
+		<div class="login-form">
+            <div class="sign-in-htm">
+                <div class="group">
+                    <label for="user" class="label">Nume si Prenume</label>
+                    <input id="numeSimptome" type="text" class="input">
+                </div>
+                <div class="group">
+                    <label for="pass" class="label">Varsta</label>
+                    <input id="varstaSimptome" type="number" class="input">
+                </div>
+                <div class="group">
+                    <label for="user" class="label">CNP</label>
+                    <input id="cnp" type="text" class="input">
+                </div>
+                <div class="group1">
+                    <label for="skill" class="label">SIMPTOME</label>
+                    <input class="input1" type="text" id="myInput">
+                    <span onclick="newElement()" class="addSkillBtn">Adauga</span>
+                </div>
+                <ul id="myUL"></ul>
+                <div class="group">
+                    <label for="sex" class="label">SEX</label>
+                    <input type="radio" name="experience" id="feminin">Feminin</input>
+                    <input type="radio" name="experience" id="feminin">Masculin</input>
+                </div>
+                <div class="group">
+                    <label for="user" class="label">Diagnostic</label>
+                    <input id="diagnostic" type="text" class="input">
+                </div>
+                <div class="group">
+                    <label for="user" class="label">Tratament</label>
+                    <input id="tratament" type="text" class="input">
+                </div>
+                <div class="group">
+                    <label for="user" class="label">Dată programare</label>
+                    <input id="dataProgramare" type="text" class="input">
+                </div>
+                <div class="group">
+                    <label for="user" class="label">Oră programare</label>
+                    <input id="oraProgramare" type="text" class="input">
+                </div>
+                <div class="group">
+                    <label for="user" class="label">Număr de telefon</label>
+                    <input id="telefon" type="text" class="input">
+                </div>
+                <div class="group">
+                    <label for="user" class="label">Rată de succes tratament</label>
+                    <input id="rata" type="text" class="input">
+                </div>
+                <div class="group">
+                    <input id="check" type="checkbox" class="check" checked>
+                    <label for="check"><span class="icon"></span> Am mai beneficiat de tratamente ale Oakdale</label>
+                </div>
+                <div class="group">
+                    <input type="submit" class="button" id="Submit1" value="Furnizeaza diagnostic">
+                </div>
+                <div class="hr"></div>
+            </div>
+		
+			
+	
+		</div>
+	</div>
+</div>
+
+
+
+			<script>	
+		var SkillsArray = new Array();
+						
+		var myNodelist = document.getElementsByTagName("LI");	// Create a "close" button and append it to each list item
+		var i;
+		for (i = 0; i < myNodelist.length; i++) {
+			var span = document.createElement("SPAN");
+			var txt = document.createTextNode("\u00D7");
+			span.className = "close";
+			span.appendChild(txt);
+			myNodelist[i].appendChild(span);
+		} 
+		
+		var close = document.getElementsByClassName("close");	// Click on a close button to remove the current list item
+		var i;
+		for (i = 0; i < close.length; i++) {
+			close[i].onclick = function() {
+				var div = this.parentElement;
+				div.parentNode.removeChild(div);
+			}
+		}
+		
+		function newElement() {									// Create a new list item when clicking on the "Add" button
+			var li = document.createElement("li");
+			var inputValue = document.getElementById("myInput").value; 
+			li.appendChild(document.createTextNode(inputValue)); 			
+			if (inputValue === '')  {
+				alert("You must write something!");
+			} else {
+				if(SkillsArray.indexOf(inputValue)>=0){
+					alert(inputValue + " already exists in skills collection");
+				} else{
+					document.getElementById("myUL").appendChild(li);
+					SkillsArray.push(inputValue);
+				}
+		    }
+			
+			document.getElementById("myInput").value = ""; 
+
+			var span = document.createElement("SPAN");
+			var txt = document.createTextNode("\u00D7");
+			span.className = "close";
+			span.appendChild(txt);
+			li.appendChild(span);
+
+			for (i = 0; i < close.length; i++) {
+				close[i].onclick = function() {
+					var div = this.parentElement;
+					div.parentNode.removeChild(div);
+				};
+			}
+		}
+
+
+		
+		//Send to UiPath
+
+		var numePacient = "nothnig";
+		document.getElementById("Submit1").onclick = function() {
+		
+			var numePacient = document.getElementById("numeSimptome").value;
+			var varstaPacient = document.getElementById("varstaSimptome").value;	
+			
+			if(SkillsArray.length < 1){											// Skills
+				alert("Trebuie sa introduceti cel putin un simptom. ");
+				return;				
+			}
+
+            var cnpPacient = document.getElementById("cnp").value;
+            var diagnosticPacient = document.getElementById("diagnostic").value;
+            var tratamentPacient = document.getElementById("tratament").value;
+            var dataProgramare = document.getElementById("dataProgramare").value;
+             var telefonPacient = document.getElementById("telefon").value;
+            var oraProgramare = document.getElementById("oraProgramare").value;
+            var rataTratament = document.getElementById("rata").value;
+				
+			var Feminin;
+			var Masculin;		 
+
+			if (document.getElementById("feminin").checked) { 								
+				Feminin = "F";
+			}
+			else{
+				Feminin="M";
+			}
+				
+			if(Masculin=="" && Feminin==""){
+				alert("Te rugam sa alegi sexul.");
+				return;
+			}
+			
+			var beneficiarServicii;
+			if(document.getElementById("check").checked){
+				beneficiarServicii="Da";
+			}else{
+				beneficiarServicii="Nu"
+			}
+			var OutputString="!Nume si Prenume:" +numePacient +"\n"+ "!CNP:"+ cnpPacient + "\n" + "!Varsta:"+ varstaPacient + "\n"+ "!Feminin:"+ Feminin +  "\n"+"!Simptome:"+ SkillsArray.join(",")+"\n" +"!Diagnostic:"+ diagnosticPacient + "\n"+ "!Tratament:"+ tratamentPacient+ "\n"+ "!Data programare:"+ dataProgramare+ "\n"+ "!Ora programare:"+  oraProgramare+"\n"+ "!Telefon:"+ telefonPacient +"\n"+ "!Rata tratament:"+ rataTratament+"\n"+ "!Client:" +beneficiarServicii ;
+			window.external.setResult(OutputString);
+		};
+		
+			</script>
+
+</body>
+</html>
